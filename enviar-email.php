@@ -2,18 +2,19 @@
 
 //PEGANDO OS DADOS DO FORMULÁRIO E GUARDANDO NAS VARIÁVEIS
 
-$var_campo1 = $_GET['campo1'];
-$var_campo2 = $_GET['campo2'];
+$var_campo1 = $_POST['campo1'];
+$var_campo2 = $_POST['campo2'];
 
 $assunto = "Envio de e-mail pelo site tal";
 
-$mensagem = "Mensagem do site:";
-$mensagem .= "Campo 1: $var_campo1";
-$mensagem .= "Campo 2: $var_campo2";
+$mensagem = "Mensagem do site:/n";
+$mensagem .= "Campo 1: $var_campo1/n";
+$mensagem .= "Campo 2: $var_campo2/n";
 
 $emailpara = "contato@viskoo.com.br";
 
-EnviarEmail($emailpara, $assunto, $mensagem);
+EnviarEmail("contato@viskoo.com.br", $assunto, $mensagem);
+EnviarEmail("josias@viskoo.com.br", $assunto, $mensagem);
 ?>
 
 <script type="text/javascript">
